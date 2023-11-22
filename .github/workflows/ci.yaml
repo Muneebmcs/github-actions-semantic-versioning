@@ -39,7 +39,7 @@ jobs:
           owner="muneeb"
           repo="my-project"
           release_json=$(curl https://api.github.com/repos/$owner/$repo/releases)
-          Release_tag=$(echo "$release_json" | jq -r '.[0].tag_name')
+          Release_tag=$(echo "$release_json"')
           echo "Release_tag: Latest Tag is : $Release_tag"
           echo ::set-output name=Release_tag::"$Release_tag"
           
